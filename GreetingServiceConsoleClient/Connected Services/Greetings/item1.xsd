@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://conestogac.on.ca/schemas/2023/09/greetings" elementFormDefault="qualified" targetNamespace="http://conestogac.on.ca/schemas/2023/09/greetings" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="GreetingRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Recipient" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GreetingRequest" nillable="true" type="tns:GreetingRequest" />
+  <xs:complexType name="GreetingResponse">
+    <xs:sequence>
+      <xs:element name="Greeting" nillable="true" type="xs:string" />
+      <xs:element name="TimeOfDay" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GreetingResponse" nillable="true" type="tns:GreetingResponse" />
+</xs:schema>
